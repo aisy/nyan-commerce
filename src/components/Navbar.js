@@ -1,4 +1,3 @@
-import React from 'react';
 import { Space, Typography, Button, Input, Badge, Dropdown, List, Avatar, Card, Menu } from 'antd';
 import { UserOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
@@ -69,6 +68,10 @@ const Navbar = ({ isLogin = true }) => {
       width: '100%',
       padding: "15px 100px",
     },
+    headerContent: {
+      display: "flex",
+      justifyContent: "space-between"
+    },
     headerTitle: {
       fontWeight: 700,
     }
@@ -77,7 +80,7 @@ const Navbar = ({ isLogin = true }) => {
   return (
     <>
       <div style={styles.header}>
-        <Space size={200}>
+        <div style={styles.headerContent}>
           <Text style={styles.headerTitle}>Nyan Commerce</Text>
           <div style={{ width: 400 }}>
             <Search placeholder="Cari berdasarkan nama produk atau brand" onSearch={value => console.log(value)} enterButton />
@@ -100,7 +103,7 @@ const Navbar = ({ isLogin = true }) => {
                 <Button type={"primary"} shape={"round"} icon={<UserOutlined />}>Akun</Button>
             }
           </Space>
-        </Space>
+        </div>
       </div>
     </>
   )
