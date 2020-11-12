@@ -1,0 +1,24 @@
+import { Card, List, Avatar, Button } from 'antd'
+
+const ShopeingCart = ({ data }) => {
+  return (
+    <Card style={{ width: 400, padding: 20 }}>
+      <List
+        itemLayout="horizontal"
+        dataSource={data}
+        renderItem={item => (
+          <List.Item>
+            <List.Item.Meta
+              avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+              title={<a href="https://ant.design">{item.title}</a>}
+              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+            />
+          </List.Item>
+        )}
+      />
+      <Button block shape={"round"} type={"primary"}>Check out</Button>
+    </Card>
+  )
+}
+
+export default ShopeingCart
