@@ -4,7 +4,7 @@ const CarouselPromo = () => {
 
   const styles = {
     sliderImage: {
-      height: '260px',
+      height: '360px',
       color: '#fff',
       lineHeight: '160px',
       textAlign: 'center',

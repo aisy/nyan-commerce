@@ -1,13 +1,13 @@
 import { Typography, Button, Row } from 'antd';
 
-import CardProduct from '../../components/CardProduct';
+import CardProduct from '../CardProduct';
 
 const FlashSale = () => {
 
   const { Title } = Typography;
 
   return (
-    <div style={{ padding: "0px 100px", margin: "40px 0px" }}>
+    <div style={{ margin: "40px 0px" }}>
       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
         <Title level={4}>Flash Sale</Title>
         <Button type={"primary"}>View All</Button>
@@ -15,7 +15,7 @@ const FlashSale = () => {
 
       <Row gutter={16}>
         {
-          [ ...Array(6) ].map((x, i) => (
+          [...Array(6)].map((x, i) => (
             <CardProduct />
           ))
         }

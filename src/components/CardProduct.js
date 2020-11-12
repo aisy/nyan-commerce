@@ -1,13 +1,13 @@
 import { Card, Typography, Col } from 'antd';
 
-const CardProduct = ({ span, title, price, link }) => {
+const CardProduct = ({ span, title, price, link, bordered }) => {
 
   const { Text, Title } = Typography;
 
   return (
     <Col span={span ? span : 4}>
       <Card
-        bordered={false}
+        bordered={bordered ? bordered : false}
         hoverable
         cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
         style={{ marginBottom: 20 }}

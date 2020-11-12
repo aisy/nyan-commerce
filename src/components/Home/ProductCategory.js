@@ -6,7 +6,7 @@ const ProductCategory = ({ title }) => {
   const { Title, Text } = Typography
 
   return (
-    <div style={{ padding: "0px 100px", margin: "10px 0px" }}>
+    <div style={{ margin: "10px 0px" }}>
       <div style={{ width: "100%", marginBottom: 20 }}>
         <Title level={4}>
           {title ? title : "Product Category"}
@@ -15,7 +15,7 @@ const ProductCategory = ({ title }) => {
       <div className="site-card-wrapper">
         <Row gutter={16}>
           {
-            [ ...Array(5) ].map(() => (
+            [...Array(5)].map(() => (
               <Col span={3}>
                 <Card
                   hoverable
