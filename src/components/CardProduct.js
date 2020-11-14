@@ -1,5 +1,5 @@
-import { Card, Typography, Col, Button, Tooltip, Carousel } from 'antd';
-import { HeartOutlined, HeartFilled } from '@ant-design/icons';
+import { Card, Typography, Col, Button, Tooltip } from 'antd';
+import { HeartOutlined } from '@ant-design/icons';
 
 const CardProduct = ({ span, title, price, link, bordered }) => {
 
