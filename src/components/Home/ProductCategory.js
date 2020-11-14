@@ -15,8 +15,8 @@ const ProductCategory = ({ title }) => {
       <div className="site-card-wrapper">
         <Row gutter={16}>
           {
-            [...Array(5)].map(() => (
-              <Col span={3}>
+            [ ...Array(5) ].map((x, i) => (
+              <Col span={3} key={i}>
                 <Card
                   hoverable
                   bordered={false}
@@ -26,7 +26,7 @@ const ProductCategory = ({ title }) => {
                     <HomeOutlined style={{ fontSize: 40, color: "#096dd9" }} />
                   </div>
                   <Text type={"secondary"}>
-                    Card content
+                    Category {i + 1}
                   </Text>
                 </Card>
               </Col>
