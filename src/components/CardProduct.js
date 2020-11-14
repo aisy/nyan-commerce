@@ -1,4 +1,5 @@
-import { Card, Typography, Col } from 'antd';
+import { Card, Typography, Col, Button, Tooltip, Carousel } from 'antd';
+import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 
 const CardProduct = ({ span, title, price, link, bordered }) => {
 
@@ -12,8 +13,11 @@ const CardProduct = ({ span, title, price, link, bordered }) => {
         cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
         style={{ marginBottom: 20 }}
       >
-        <div style={{ width: "100%" }}>
-          <Title level={5}>{title ? title : "Judul"}</Title>
+        <div style={{ width: "100%", display: "flex", justifyContent: "space-between" }}>
+          <Title level={5}>{title ? title : "Title"}</Title>
+          <Tooltip placement={"topRight"} title={"Add to wishlist"}>
+            <Button shape={"circle"} size={"small"} icon={<HeartOutlined />} />
+          </Tooltip>
         </div>
         <div style={{ width: "100%" }}>
           <Text strong style={{ color: "green" }}>{price ? price : "Rp. 10000"}</Text>
