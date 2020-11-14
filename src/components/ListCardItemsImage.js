@@ -46,6 +46,7 @@ const ListCardItemsImage = () => {
                   {
                     [ ...Array(4) ].map((x, i) => (
                       <CardProduct
+                        key={i}
                         span={6}
                         bordered={true}
                         title={`Item ${i + 1}`}
@@ -59,6 +60,7 @@ const ListCardItemsImage = () => {
                   {
                     [ ...Array(4) ].map((x, i) => (
                       <CardProduct
+                        key={i}
                         span={6}
                         bordered={true}
                         title={`Item ${i + 1}`}

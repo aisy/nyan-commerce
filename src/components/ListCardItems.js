@@ -15,8 +15,9 @@ const ListCardItems = ({ title, data, link }) => {
 
       <Row gutter={16}>
         {
-          [...Array(6)].map((x, i) => (
+          [ ...Array(6) ].map((x, i) => (
             <CardProduct
+              key={i}
               title={`Item ${i + 1}`}
             />
           ))
