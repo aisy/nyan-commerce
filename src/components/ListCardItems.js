@@ -1,4 +1,4 @@
-import { Typography, Button, Row } from 'antd';
+import { Typography, Button, Row, Col } from 'antd';
 
 import CardProduct from './CardProduct';
 
@@ -15,11 +15,13 @@ const ListCardItems = ({ title, data, link }) => {
 
       <Row gutter={16}>
         {
-          [ ...Array(6) ].map((x, i) => (
-            <CardProduct
-              key={i}
-              title={`Item ${i + 1}`}
-            />
+          [...Array(6)].map((x, i) => (
+            <Col span={4}>
+              <CardProduct
+                key={i}
+                title={`Item ${i + 1}`}
+              />
+            </Col>
           ))
         }
       </Row>

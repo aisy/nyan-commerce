@@ -44,13 +44,15 @@ const ListCardItemsImage = () => {
               <div>
                 <Row gutter={24}>
                   {
-                    [ ...Array(4) ].map((x, i) => (
-                      <CardProduct
-                        key={i}
-                        span={6}
-                        bordered={true}
-                        title={`Item ${i + 1}`}
-                      />
+                    [...Array(4)].map((x, i) => (
+                      <Col span={6}>
+                        <CardProduct
+                          key={i}
+                          span={6}
+                          bordered={true}
+                          title={`Item ${i + 1}`}
+                        />
+                      </Col>
                     ))
                   }
                 </Row>
@@ -58,13 +60,15 @@ const ListCardItemsImage = () => {
               <div>
                 <Row gutter={24}>
                   {
-                    [ ...Array(4) ].map((x, i) => (
-                      <CardProduct
-                        key={i}
-                        span={6}
-                        bordered={true}
-                        title={`Item ${i + 1}`}
-                      />
+                    [...Array(4)].map((x, i) => (
+                      <Col span={6}>
+                        <CardProduct
+                          key={i}
+                          span={6}
+                          bordered={true}
+                          title={`Item ${i + 1}`}
+                        />
+                      </Col>
                     ))
                   }
                 </Row>
