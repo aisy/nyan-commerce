@@ -1,11 +1,21 @@
 import { Card, List, Avatar, Button } from 'antd'
 
-const ShopeingCart = ({ data }) => {
+const ShoppingCart = () => {
+
+  const dataSample = [
+    {
+      title: 'Ant Design Title 1',
+    },
+    {
+      title: 'Ant Design Title 2',
+    },
+  ];
+
   return (
-    <Card style={{ width: 400, padding: 20 }}>
+    <Card style={{ width: 400 }}>
       <List
         itemLayout="horizontal"
-        dataSource={data}
+        dataSource={dataSample}
         renderItem={item => (
           <List.Item>
             <List.Item.Meta
@@ -21,4 +31,4 @@ const ShopeingCart = ({ data }) => {
   )
 }
 
-export default ShopeingCart
+export default ShoppingCart
