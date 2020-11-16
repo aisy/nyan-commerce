@@ -1,5 +1,5 @@
-import { Space, Typography, Button, Input, Badge, Dropdown, List, Avatar, Card, Menu } from 'antd';
-import { UserOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { Space, Typography, Button, Input, Badge, Dropdown, Menu, Divider } from 'antd';
+import { UserOutlined, ShoppingCartOutlined, LogoutOutlined } from '@ant-design/icons';
 
 import ShoppingCart from './ShoppingCart';
 
@@ -8,36 +8,27 @@ const Navbar = ({ isLogin = true }) => {
   const { Text } = Typography;
   const { Search } = Input;
 
-  const data = [
-    {
-      title: 'Ant Design Title 1',
-    },
-    {
-      title: 'Ant Design Title 2',
-    },
-  ];
-
-
-
   const renderAccount = () => {
     return (
       <Menu style={{ padding: 12 }}>
         <Menu.Item>
           <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
             1st menu item
-      </a>
+          </a>
         </Menu.Item>
         <Menu.Item>
           <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
             2nd menu item
-      </a>
+          </a>
         </Menu.Item>
         <Menu.Item>
           <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
             3rd menu item
-      </a>
+          </a>
         </Menu.Item>
-        <Menu.Item danger>a danger item</Menu.Item>
+        <Divider plain style={{ marginTop: 15, marginBottom: 15 }} />
+        <Button block icon={<LogoutOutlined />} danger>Logout</Button>
+        {/* <Menu.Item danger>Logout</Menu.Item> */}
       </Menu>
     )
   }
@@ -72,7 +63,11 @@ const Navbar = ({ isLogin = true }) => {
             <Text>Home</Text>
             <Text>Home</Text>
             <Text>Home</Text>
-            <Dropdown overlay={ShoppingCart} placement={"bottomCenter"} overlayStyle={{ paddingTop: 20 }}>
+            <Dropdown
+              overlay={<ShoppingCart />}
+              placement={"bottomCenter"}
+              overlayStyle={{ paddingTop: 20 }}
+            >
               <Badge count={4} size={"small"}>
                 <Button type={"primary"} shape={"circle"} icon={<ShoppingCartOutlined />} />
               </Badge>
